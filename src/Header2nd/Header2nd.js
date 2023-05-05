@@ -12,12 +12,13 @@ import IncDecCounter from './IncDecCounter';
 import { TbTextColor} from "react-icons/tb";
 import ToggleButtonsMultiple from './ToggleButtonsMultiple';
 import Allign from './Allign';
-
-
-
-
+import { SketchPicker } from 'react-color'
+import { useState } from 'react';
 
 const Header2nd = () => {
+   
+      
+    
     
     return ( <div className={styles.main}>
         <div className={styles.container}>
@@ -32,6 +33,8 @@ const Header2nd = () => {
             <IncDecCounter/>  
             <ToggleButtonsMultiple/>
             <Allign/>
+            {/* <SketchPicker /> */}
+            
 
         </div>
         </div>

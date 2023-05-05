@@ -20,7 +20,7 @@ export default function ToggleButtonsMultiple() {
       onChange={handleFormat}
       aria-label="text formatting"
     >
-      <ToggleButton value="bold" aria-label="bold">
+      <ToggleButton value="bold" aria-label="bold" >
         <FormatBoldIcon />
       </ToggleButton>
       <ToggleButton value="italic" aria-label="italic">
