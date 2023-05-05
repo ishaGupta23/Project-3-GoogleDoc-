@@ -19,9 +19,10 @@ const Editable = () => {
         onChange={onContentChange}
         onBlur={onContentChange}
         html={content}
+        className="content-box"
       />
     </div>
   );
 };
 
-export default Editable;
+export default Editable;
