@@ -4,8 +4,12 @@ import NavLinks from "../NavLinks/NavLinks";
 import AccountCircleRoundedIcon from "@mui/icons-material/AccountCircleRounded";
 import MessageRoundedIcon from "@mui/icons-material/MessageRounded";
 import VideoFileRoundedIcon from "@mui/icons-material/VideoFileRounded";
+import { useState } from "react";
 
 const MainNavBar = () => {
+  const [title, setTitle] = useState("Untitled document");
+  const [editing, setEditing] = useState(false);
+
   return (
     <div className={styles.MainContainer}>
       <div className={styles.LeftSection}>
@@ -17,7 +21,18 @@ const MainNavBar = () => {
         </div>
         <div className={styles.ContentSection}>
           <div className={styles.Headiding}>
-            <h3>Untitled document</h3>
+            {editing ? (
+              <input
+                type="text"
+                value={title}
+                onChange={(e) => setTitle(e.target.value)}
+                onBlur={() => setEditing(false)}
+                autoFocus
+              />
+            ) : (
+              <h3 onClick={() => setEditing(true)}>{title}</h3>
+            )}
+
             <MdDriveFileMoveOutline
               style={{
                 fontSize: "20px",

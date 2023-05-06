@@ -8,6 +8,7 @@
     display: flex;
 }
 
+
 .DocImg img{
   width: 50px;
   height: 50px;
@@ -26,7 +27,13 @@
     font-weight: 150;
     margin-top: 0px;
 }
-
+.Headiding input{
+    margin:4px;
+    margin-bottom: 7px;
+    outline: 1px solid blue;
+    padding: 1px;
+    border-radius: 5px;
+}
 
 /* --------------------------------Right section style---------------------- */
 .Logo{

@@ -4,7 +4,6 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import styles from "./NavLinks.module.css";
 import html2pdf from "html2pdf.js";
-
 const NavLinks = () => {
   const [fileAnchorEl, setFileAnchorEl] = useState(null);
   const [viewAnchorEl, setViewAnchorEl] = useState(null);
@@ -76,6 +75,7 @@ const NavLinks = () => {
         <MenuItem
           onClick={() => {
             handleSave();
+            // handleClose();
           }}
         >
           Save
@@ -92,9 +92,9 @@ const NavLinks = () => {
         open={Boolean(viewAnchorEl)}
         onClose={handleClose}
       >
-        <MenuItem onClick={handleClose}>Save</MenuItem>
-        <MenuItem onClick={handleClose}>Save As</MenuItem>
-        <MenuItem onClick={handleClose}>Rename</MenuItem>
+        <MenuItem onClick={handleClose}>Show print layout</MenuItem>
+        <MenuItem onClick={handleClose}>Show ruler</MenuItem>
+        <MenuItem onClick={handleClose}>Show outline</MenuItem>
       </Menu>
 
       <Button style={{ fontSize: "12px" }} onClick={handleEditClick}>
@@ -105,9 +105,9 @@ const NavLinks = () => {
         open={Boolean(editAnchorEl)}
         onClose={handleClose}
       >
-        <MenuItem onClick={handleClose}>Save</MenuItem>
-        <MenuItem onClick={handleClose}>Save As</MenuItem>
-        <MenuItem onClick={handleClose}>Rename</MenuItem>
+        <MenuItem onClick={handleClose}>undo</MenuItem>
+        <MenuItem onClick={handleClose}>redo</MenuItem>
+        <MenuItem onClick={handleClose}>paste</MenuItem>
       </Menu>
 
       <Button style={{ fontSize: "12px" }} onClick={handleFormatClick}>
@@ -118,9 +118,9 @@ const NavLinks = () => {
         open={Boolean(formatAnchorEl)}
         onClose={handleClose}
       >
-        <MenuItem onClick={handleClose}>Save</MenuItem>
-        <MenuItem onClick={handleClose}>Save As</MenuItem>
-        <MenuItem onClick={handleClose}>Rename</MenuItem>
+        <MenuItem onClick={handleClose}>Text</MenuItem>
+        <MenuItem onClick={handleClose}>Paragraph styles</MenuItem>
+        <MenuItem onClick={handleClose}>Align & indent</MenuItem>
       </Menu>
 
       <Button style={{ fontSize: "12px" }} onClick={handleToolsClick}>
@@ -131,9 +131,9 @@ const NavLinks = () => {
         open={Boolean(toolsAnchorEl)}
         onClose={handleClose}
       >
-        <MenuItem onClick={handleClose}>Save</MenuItem>
-        <MenuItem onClick={handleClose}>Save As</MenuItem>
-        <MenuItem onClick={handleClose}>Rename</MenuItem>
+        <MenuItem onClick={handleClose}>Spelling and grammar</MenuItem>
+        <MenuItem onClick={handleClose}>Word count</MenuItem>
+        <MenuItem onClick={handleClose}>Review suggested edits</MenuItem>
       </Menu>
     </div>
   );
